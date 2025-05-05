@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>今日份的汤夸夸</title>
+  <style>
+    body {
+      font-family: "微软雅黑", sans-serif;
+      text-align: center;
+      background-color: #fffaf0;
+      padding-top: 100px;
+    }
+    h1 {
+      color: #ff69b4;
+      margin-bottom: 50px;
+    }
+    #compliment {
+      font-size: 24px;
+      color: #333;
+      margin: 30px auto;
+      width: 60%;
+      min-height: 60px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #ffa07a;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ff7f50;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>今日份的夸夸 💖</h1>
+  <div id="compliment">点一下按钮看看我多会夸你～</div>
+  <button onclick="generateCompliment()">点我！</button>
+
+  <script>
+const compliments = [
+  "你打方向盘的样子，比打游戏还认真，帅爆了！🎮➡️🚗",
+  "教练都舍不得凶你，谁让你长得这么讨人喜欢！😇",
+  "车是新的，你的勇气更新！开车第一天就这么稳，天赋型选手！🔥",
+  "转弯那么顺，是不是偷偷练过？还是你转弯的时候，连风都羡慕～🍃",
+  "别人学车是胆战心惊，你学车是甜美出击～💥🍬",
+  "副驾的教练都被你稳稳当当地征服了～👏",
+  "你的刹车踩出了小猫咪的温柔，又稳又软～🐾",
+  "你坐上驾驶座的那一刻，全世界的方向都向你看齐！🧭✨",
+  "下次看到谁紧张学车，我就推荐：‘你去看看姜姜怎么开的！’😉"
+];
+
+
+    function generateCompliment() {
+      const randomIndex = Math.floor(Math.random() * compliments.length);
+      document.getElementById("compliment").textContent = compliments[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
